@@ -30,11 +30,6 @@ class ConfigurableBundleNoteWidgetDependencyProvider extends AbstractBundleDepen
      */
     public const CLIENT_QUOTE = 'CLIENT_QUOTE';
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -45,11 +40,6 @@ class ConfigurableBundleNoteWidgetDependencyProvider extends AbstractBundleDepen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addConfigurableBundleNoteClient(Container $container): Container
     {
         $container->set(static::CLIENT_CONFIGURABLE_BUNDLE_NOTE, function (Container $container) {
@@ -61,11 +51,6 @@ class ConfigurableBundleNoteWidgetDependencyProvider extends AbstractBundleDepen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addGlossaryStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_GLOSSARY_STORAGE, function (Container $container) {
@@ -77,11 +62,6 @@ class ConfigurableBundleNoteWidgetDependencyProvider extends AbstractBundleDepen
         return $container;
     }
 
-    /**
-     * @param \Spryker\Yves\Kernel\Container $container
-     *
-     * @return \Spryker\Yves\Kernel\Container
-     */
     protected function addQuoteClient(Container $container): Container
     {
         $container->set(static::CLIENT_QUOTE, function (Container $container) {

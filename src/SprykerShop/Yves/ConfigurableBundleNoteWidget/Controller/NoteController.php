@@ -33,11 +33,6 @@ class NoteController extends AbstractController
      */
     protected const ROUTE_CART = 'cart';
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     public function addAction(Request $request): RedirectResponse
     {
         $redirectResponse = $this->executeAddAction($request);
@@ -45,11 +40,6 @@ class NoteController extends AbstractController
         return $redirectResponse;
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     protected function executeAddAction(Request $request): RedirectResponse
     {
         $configurableBundleNoteForm = $this->getFactory()
@@ -71,11 +61,6 @@ class NoteController extends AbstractController
         return $this->getRedirectResponse($request);
     }
 
-    /**
-     * @param \Symfony\Component\HttpFoundation\Request $request
-     *
-     * @return \Symfony\Component\HttpFoundation\RedirectResponse
-     */
     protected function getRedirectResponse(Request $request): RedirectResponse
     {
         if ($request->headers->has(static::REQUEST_HEADER_REFERER)) {

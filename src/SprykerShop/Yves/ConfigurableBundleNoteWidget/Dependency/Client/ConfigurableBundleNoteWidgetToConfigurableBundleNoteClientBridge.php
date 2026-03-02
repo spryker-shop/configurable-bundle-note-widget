@@ -25,11 +25,6 @@ class ConfigurableBundleNoteWidgetToConfigurableBundleNoteClientBridge implement
         $this->configurableBundleNoteClient = $configurableBundleNoteClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfiguredBundleNoteRequestTransfer $configuredBundleNoteRequestTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function setConfiguredBundleNote(
         ConfiguredBundleNoteRequestTransfer $configuredBundleNoteRequestTransfer
     ): QuoteResponseTransfer {

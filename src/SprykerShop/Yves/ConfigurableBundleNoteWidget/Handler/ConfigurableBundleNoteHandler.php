@@ -25,10 +25,6 @@ class ConfigurableBundleNoteHandler implements ConfigurableBundleNoteHandlerInte
      */
     protected $quoteClient;
 
-    /**
-     * @param \SprykerShop\Yves\ConfigurableBundleNoteWidget\Dependency\Client\ConfigurableBundleNoteWidgetToConfigurableBundleNoteClientInterface $configurableBundleNoteClient
-     * @param \SprykerShop\Yves\ConfigurableBundleNoteWidget\Dependency\Client\ConfigurableBundleNoteWidgetToQuoteClientInterface $quoteClient
-     */
     public function __construct(
         ConfigurableBundleNoteWidgetToConfigurableBundleNoteClientInterface $configurableBundleNoteClient,
         ConfigurableBundleNoteWidgetToQuoteClientInterface $quoteClient
@@ -37,11 +33,6 @@ class ConfigurableBundleNoteHandler implements ConfigurableBundleNoteHandlerInte
         $this->quoteClient = $quoteClient;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ConfiguredBundleTransfer $configuredBundleTransfer
-     *
-     * @return \Generated\Shared\Transfer\QuoteResponseTransfer
-     */
     public function setConfiguredBundleNote(ConfiguredBundleTransfer $configuredBundleTransfer): QuoteResponseTransfer
     {
         $configuredBundleNoteRequestTransfer = (new ConfiguredBundleNoteRequestTransfer())

@@ -22,11 +22,6 @@ class ConfigurableBundleNoteForm extends AbstractType
      */
     protected const FIELD_CONFIGURABLE_BUNDLE_NOTE_MAX_LENGTH = 255;
 
-    /**
-     * @param \Symfony\Component\OptionsResolver\OptionsResolver $resolver
-     *
-     * @return void
-     */
     public function configureOptions(OptionsResolver $resolver): void
     {
         $resolver->setDefaults([
