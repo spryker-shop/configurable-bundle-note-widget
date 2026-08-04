@@ -1,7 +1,14 @@
+@use 'sass:meta';
+@use 'sass:map';
+
 @mixin configurable-bundle-note-widget-readonly-bundled-note($name: '.readonly-bundled-note') {
     #{$name} {
+        @if meta.mixin-exists(configurable-bundle-note-widget-readonly-bundled-note-base-hook) {
+            @include configurable-bundle-note-widget-readonly-bundled-note-base-hook;
+        }
+
         &__title {
-            font-size: map-get($setting-font-size, 'small');
+            font-size: map.get($setting-font-size, 'small');
         }
 
         @content;
